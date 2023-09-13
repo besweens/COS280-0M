@@ -10,10 +10,10 @@
  * 
  */
 
-public class Fraction implements INumber <T> {
+public class Fraction<T> implements INumber <T> {
 
 	private int n;
-	private int d;
+	private int d; //test comment
 
 
 	/**
@@ -38,32 +38,29 @@ public class Fraction implements INumber <T> {
 		this.d = 0;
 	}
 
-
-	public Fraction plus(Fraction input) {
-
-		return null;
-	}
-
-
-	public Fraction minus(Fraction input) {
+	@Override
+	public T plus(T input) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
-	public Fraction divide(Fraction input) {
+	@Override
+	public T minus(T input) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
-	public Fraction multiply(Fraction input) {
+	@Override
+	public T divide(T input) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
-
+	@Override
+	public T multiply(T input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	public int getNum() {
 		return n;
