@@ -15,7 +15,6 @@ public class Fraction implements INumber <T> {
 	private int n;
 	private int d;
 
-
 	/**
 	 * Constructor for Fraction objects
 	 * @param numerator
@@ -23,6 +22,8 @@ public class Fraction implements INumber <T> {
 	 */
 	public Fraction(int newNumerator, int newDenominator) {
 		//super();
+		if (newDenominator == 0)
+			throw new IllegalArgumentException("Denominator cannot be zero");
 		this.n = newNumerator;
 		this.d = newDenominator;
 	}
@@ -40,7 +41,7 @@ public class Fraction implements INumber <T> {
 
 
 	public Fraction plus(Fraction input) {
-
+		
 		return null;
 	}
 
@@ -50,19 +51,15 @@ public class Fraction implements INumber <T> {
 		return null;
 	}
 
-
+	@Override
 	public Fraction divide(Fraction input) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Fraction((this.n * input.getD()), (this.d * input.getNum());
 	}
 
-
+	@Override
 	public Fraction multiply(Fraction input) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Fraction((this.n * input.getNum()), (this.d * input.getD());
 	}
-
-
 
 
 	public int getNum() {
@@ -81,8 +78,33 @@ public class Fraction implements INumber <T> {
 		this.d = d;
 	}
 
+	
+	/** Find the smallest value in an array of Fractions
+	 * @param input: the Fraction array to find the minimum from
+	 * @return min: the smallest Fraction in the array input
+	 */
+	Fraction findMin(Fraction[] input) {
+		Fraction min = input[0];
+		for (int i = 1; i < input.length; ++i) 
+			if (min.compareTo(input[i]) == -1) //check this -1 variable when compareTo method comes through
+				min = input[i];
+		return min;
+	}
+	/** Find the largest value in an array of Fractions
+	 * @param input: the Fraction array to find the maximum from
+	 * @return max: the largest Fraction in the array input
+	 */
+	Fraction findMax(Fraction[] input) {
+		Fraction max = input[0];
+		for (int i = 1; i < input.length; ++i) 
+			if (max.compareTo(input[i]) == 1) //check this 1 variable when compareTo method comes through
+				max = input[i];
+		return max;
+	}
+
+
+	
 	public void print() {
-		// TODO Auto-generated method stub
 
 	}
 
