@@ -1,8 +1,13 @@
 import java.util.Random;
+/*
+ * Selection sort class that takes fraction array as an input
+ * 
+ * @author Jere Perisic
+ * @version September 15, 2023
+ */
+public class selectionSort {
 
-public class SelectionSort {
-
-    public static int[] sort(Fraction[] arr){
+    public static Fraction[] sort(Fraction[] arr){
         for(int i = 0; i< arr.length-1;i++){
             int min = i;
             for(int j=i+1;j<arr.length;j++){
