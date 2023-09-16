@@ -11,10 +11,10 @@ public class selectionSort {
         for(int i = 0; i< arr.length-1;i++){
             int min = i;
             for(int j=i+1;j<arr.length;j++){
-                if(arr[j]<arr[min]){
+                if(arr[j].compare(arr[min])){
                     min=j;
                 }
-                int swap = arr[min];
+                Fraction swap = arr[min];
                 arr[min]=arr[i];
                 arr[i]=swap;
             }
