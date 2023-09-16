@@ -27,7 +27,21 @@ public class Fraction implements INumber <T> {
 		this.n = newNumerator;
 		this.d = newDenominator;
 	}
+	/*
+	compare method
+	 */
+	public int compare(Fraction num){
+		double firstNum =  (double) this.n / this.d;
+		double secondNum = (double) num.n / num.d;
 
+		if(firstNum<secondNum){
+			return -1;
+		}else if(firstNum>secondNum){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
 	/**
 	 * Default constructor
 	 * @param numerator
@@ -86,7 +100,7 @@ public class Fraction implements INumber <T> {
 	Fraction findMin(Fraction[] input) {
 		Fraction min = input[0];
 		for (int i = 1; i < input.length; ++i) 
-			if (min.compareTo(input[i]) == -1) //check this -1 variable when compareTo method comes through
+			if (min.compare(input[i]) == -1) //check this -1 variable when compareTo method comes through
 				min = input[i];
 		return min;
 	}
@@ -97,11 +111,29 @@ public class Fraction implements INumber <T> {
 	Fraction findMax(Fraction[] input) {
 		Fraction max = input[0];
 		for (int i = 1; i < input.length; ++i) 
-			if (max.compareTo(input[i]) == 1) //check this 1 variable when compareTo method comes through
+			if (max.compare(input[i]) == 1) //check this 1 variable when compareTo method comes through
 				max = input[i];
 		return max;
 	}
+	/*
+	Selection sort for array of fractions
+	@param fraction array
+	@return sorted array
+	 */
+	public static void sort(Fraction[] arr) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			int min = i;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[j].compare(arr[min]) < 0) {
+					min = j;
+				}
+				Fraction swap = arr[min];
+				arr[min] = arr[i];
+				arr[i] = swap;
+			}
 
+		}
+    }
 
 	
 	public void print() {
