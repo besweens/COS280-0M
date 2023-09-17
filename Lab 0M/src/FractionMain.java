@@ -6,13 +6,15 @@
  * Ben Sweeney,Abby Pitcairn, Jere Perisic, Esther Mugish
  * 
  * Version:
- * 20230911
+ * 20230917
  * 
  */
 public class FractionMain {
 
 	public static void main(String[] args) {
 
+		System.out.println("FractionMain test");
+		
 		
 	}
 
