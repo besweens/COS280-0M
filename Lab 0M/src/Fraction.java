@@ -3,10 +3,10 @@
  * Create fraction objects with numerator and denominator inputs
  * 
  * Authors:
- * Ben Sweeney,
+ * Ben Sweeney,Jere Parisic, Abby Pitcairn, Esther Mugish
  * 
  * Version:
- * 20230911
+ * 20230917
  * 
  */
 
