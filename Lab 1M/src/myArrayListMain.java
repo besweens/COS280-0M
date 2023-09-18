@@ -14,6 +14,7 @@ public class myArrayListMain {
 //		for(int i=0; i<fractionArray.length; i++)
 //			fractionArray[i] = new Fraction(i, i+1);
 		
+		System.out.println("Lab 1M - Custom Array Lists");
 		
 	}
 	
