@@ -201,11 +201,18 @@ public class Fraction implements INumber <Fraction>, Comparable<Fraction>{
 	public void setD(int d) {
 		this.d = d;
 	}
-
+	/*
+	 * PUBLIC METHOD print
+	 * Interface-specified void print method
+	 */
 	public void print() {
 		System.out.print(this.n + "/" + this.d);
 	}
 	
+	/*
+	 * PUBLIC METHOD toPrint
+	 * Custom printing string for easier in-line use
+	 */
 	public String toPrint() {
 		return this.n + "/" + this.d;
 	}

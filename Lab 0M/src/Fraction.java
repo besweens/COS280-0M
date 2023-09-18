@@ -181,14 +181,14 @@ public class Fraction implements INumber <Fraction>{
 
 	/*
 	 * PUBLIC METHOD print
-	 * @Interface-specified void print method
+	 * Interface-specified void print method
 	 */
 	public void print() {
 		System.out.print(this.n + "/" + this.d);
 	}
 	
 	/*
-	 * PUBLIC METHOD setD
+	 * PUBLIC METHOD toPrint
 	 * Custom printing string for easier in-line use
 	 */
 	public String toPrint() {
