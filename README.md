@@ -1,3 +1,3 @@
-# COS280-0W
+# COS285-LAB
 
-Add a new line
+Repo for Team Supercool
