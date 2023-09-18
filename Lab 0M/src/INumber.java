@@ -2,12 +2,8 @@
  * INTERFACE INumber
  * Defines methods for INumber objects
  * 
- * Authors:
- * Behrooz Mansouri, Ben Sweeney
- * 
- * Version:
- * 20230917
- * 
+ * @author Behrooz Mansouri, Ben Sweeney
+ * @version 20230917
  */
 
 public interface INumber<T> {
