@@ -27,6 +27,17 @@ public class Fraction implements INumber <T> {
 		this.n = newNumerator;
 		this.d = newDenominator;
 	}
+
+	//compare method 
+	int product1 = f.numerator * f.denominator;
+        int product2 = f.numerator * f.denominator;
+
+        if (product1 < product2) {
+            return -1;
+        } else if (product1 == product2) {
+            return 0;
+        } else {
+            return 1;
 	/*
 	compare method
 	 */
@@ -51,6 +62,13 @@ public class Fraction implements INumber <T> {
 		//super();
 		this.n = 0;
 		this.d = 0;
+
+	
+		int numerator;
+            int denominator;
+        public Fraction(int numerator, int denominator) {
+            this.numerator = numerator;
+            this.denominator = denominator;
 	}
 
 
